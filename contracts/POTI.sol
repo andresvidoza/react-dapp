@@ -17,7 +17,8 @@ contract PeopleOfTheInternet is ERC721, ERC721Enumerable, ERC721URIStorage, Owna
     constructor() ERC721("PeopleOfTheInternet", "POTI") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https//ipfs.io/ipfs/QmZjnN9TJZAzMGAHoxKLwsLM9Z3awMaFFK9BMByvEDxsCy";
+       // return "https://ipfs.io/ipfs/QmVfcWV7fPVs5WaY2PpuXDnFcD9ZrmyFk7k5izAzusH5jH";
+       return "";
     }
 
     // anybody can call and create their own NFT, mint can go forever ( add onlyOwner if you dont want)

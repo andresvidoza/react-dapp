@@ -8,7 +8,8 @@ import { Web3Provider } from '@ethersproject/providers';
 
 // Store contract within just a variable
 const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-const potiAddress = "0xAedF2bad6D60357Aa2F1e0f05879018106E30354";
+// contract address
+const potiAddress = "0x18229eBb33981b2659a9ee679013B89469563FB7";
 
 function App() {
 
@@ -82,7 +83,7 @@ function App() {
       // });
       const contract = new ethers.Contract(potiAddress, POTI.abi, signer);
       //now we can create the transaction ( writing )
-      const transaction = await contract.safeMint(window.ethereum.selectedAddress, "https//ipfs.io/ipfs/QmZjnN9TJZAzMGAHoxKLwsLM9Z3awMaFFK9BMByvEDxsCy", {value: ethers.utils.parseEther("0.01"), gasPrice: ethers.utils.parseUnits('100', 'gwei'), gasLimit: 1000000}); // safe mint to this address
+      const transaction = await contract.safeMint(window.ethereum.selectedAddress, "https://ipfs.io/ipfs/QmVfcWV7fPVs5WaY2PpuXDnFcD9ZrmyFk7k5izAzusH5jH", {value: ethers.utils.parseEther("0.01"), gasPrice: ethers.utils.parseUnits('100', 'gwei'), gasLimit: 1000000}); // safe mint to this address
       // wait for the transaction to be confirmed in the blockchain ( in production environment in takes longer )
       await transaction.wait();
 

@@ -26,7 +26,7 @@ module.exports = {
     hardhat: {
       chainId: 1337 // specific to how hardhat works.
     },
-    ropsten: {
+    rinkeby: {
       url: `${process.env.ROPTSTEN_URL}`,
       accounts: [`0x${process.env.ACCOUNT_KEY}`] // deploying this account on behalf of this user thats why we use the private key
     }
