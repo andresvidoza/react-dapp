@@ -18,4 +18,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  paths: {
+    artifacts: './src/artifacts' // interact with within oru frontend | this is compiled smart contracts
+  },
+  networks: {
+    hardhat: {
+      chainId: 1337 // specific to how hardhat works.
+    }
+  }
+
 };
